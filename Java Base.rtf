@@ -1,0 +1,215 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1040{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset2 Wingdings;}{\f2\fnil Consolas;}{\f3\fnil\fcharset0 Consolas;}}
+{\colortbl ;\red0\green0\blue0;\red27\green98\blue145;}
+{\*\generator Riched20 10.0.18362}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\b\f0\fs22\lang16 1) Definizione di algoritmo.\b0\par
+Flusso logico delle azioni da compiere per raggiungere un obiettivo e/o risolvere un problema. Ha sempre\par
+un inizio ed una fine e prevedere l\rquote utilizzo di strutture logiche quali: strutture condizionali e cicli.\par
+\b 2) Definizione di programma.\b0\par
+Insieme di algoritmi che tradotto da sorgente in linguaggio macchina (da un compilatore), indica alla cpu le\par
+operazioni da fare per risolvere un problema. \par
+\b 2bis) Quali sono le fasi di progettazione del software?\b0\par
+\b\f1\'b7\f0  Analisi \b0 (Esplicitazione dei requisiti. Analisi dei requisiti. Analisi del dominio. Analisi di fattibilit\'e0 Analisi\par
+dei costi): ci rivolgiamo al cliente per raccogliere le sue richieste e proporre eventualmente soluzioni\par
+alternative.\par
+\b\f1\'b7\f0  Progettazione \b0 (Progetto architetturale. Localizzazione software. Progetto di dettaglio): la\par
+progettazione prevede l\rquote uso dei diagrammi di flusso e l\rquote uml, ovvero, un linguaggio grafico per\par
+rappresentare la gerarchia di interfacce e classi che compongono il nostro progetto.\par
+\b\f1\'b7\f0  Programmazione\b0 : scrittura del codice.\par
+\b\f1\'b7\f0  Ispezione \b0 e Debugging: controllo degli errori.\par
+\b\f1\'b7\f0  Collaudo\b0 : valutazione della correttezza rispetto alle specifiche da parte dei tester. Possono essere\par
+individuate due sottoattivit\'e0: collaudo dei singoli moduli e collaudo del sistema integrato; inoltre\par
+possono essere individuate ulteriori sottoattivit\'e0 per ogni aspetto del prodotto software che\par
+interessa collaudare: collaudo funzionale, collaudo di performance, collaudo di rottura, collaudo di\par
+regressione, collaudo di sicurezza, collaudo di accessibilit\'e0, collaudo di accettazione, ecc. . In caso di\par
+mancato rispetto delle specifiche il software, assieme al documento delle anomalie o bug, torna\par
+indietro agli sviluppatori con il compito di risolvere i problemi riscontrati attraverso anche il\par
+debugging del software. In genere le anomalie di funzionamento sono gestite tramite appositi\par
+software gestori di segnalazione anomalie, detti anche sistemi di ticketing o di bug tracking, che\par
+registrano i problemi segnalati al team di sviluppo e ne facilitano la relativa organizzazione,\par
+classificazione e gestione (p. es. Bugzilla, Mantis, Atlassian Jira, ecc.).\par
+\b\f1\'b7\f0  Deployment\b0 : rilascio e messa in esercizio.\par
+\b\f1\'b7\f0  Manutenzione\b0 : fase di post-vendita, in cui si rilasciano patch correttive con eventuale intervento\par
+nella sede del cliente. \par
+\cf1\b 2tris) Cosa sono i diagrammi di flusso?\par
+\cf0\b0 Sono rappresentazioni grafiche di algoritmi, composte da blocchi chiamati: diagrammi e linee. I diagrammi\par
+hanno diverse forme in funzione di quello che indicano:\par
+mentre le linee rappresentano i possibili percorsi da seguire. \par
+\b 3) Differenza tra: linguaggio interpretato e linguaggio compilato.\par
+\b0 I linguaggi compilati prevedono il codice scritto in un editor, al pi\'f9 utilizzando un ambiente di sviluppo IDE\par
+che ne facilita la creazione; questo codice viene controllato per verificare che non ci siano errori e poi\par
+compilato, ovvero ogni istruzione viene trasformata in linguaggio macchina che pu\'f2 essere, cos\'ec, eseguito dal\par
+processore. Di contro, i linguaggi interpretati vedono il codice sorgente interpretato al volo e vengono,\par
+quindi, eseguite le istruzioni cos\'ec come descritte nel codice sorgente; un esempio su tutti sono PHP e\par
+Javascript. Un linguaggio interpretato \'e8 anche detto di scripting. \b\par
+4) Cosa \'e8 una variabile?\par
+\b0 Cella della porzione di memoria ram (gestita dalla JVM nel caso di Java). Una variabile \'e8 allocata nella method\par
+area se statica, nella heap memory se variabile di istanza (attributo di un oggetto) e nello stack memory se\par
+locale in un metodo. \par
+\b 5) Quale vantaggio offre Java a valle di una compilazione?\par
+\b0 La trasportabilit\'e0 grazie alla JVM. Ogni sistema operativo pu\'f2 avere la relativa JVM; quest\rquote ultima esegue il\par
+bytecode e non il linguaggio macchina, svincolando la cpu dall\rquote onere di eseguire l\rquote applicazione. Un\par
+programma scritto in Java diventa trasportabile proprio perch\'e9 non si ha pi\'f9 la dipendenza dal processore\par
+fisico, sostituito dalla macchina virtuale, la JVM. \par
+\b 6) Date due variabili cos\'ec inizializzate: int a=10; int b=3; si ricavi il \ldblquote preciso\rdblquote  risultato dato dal rapporto tra i due valori. \par
+\cf1\f2\fs28 public static void main(String[] args) \{\par
+\par
+\tab\tab String palindromo="barba";\par
+\tab\tab boolean flag=true;\par
+\tab\tab\par
+\tab\tab for (int i=0;i<palindromo.length()/2;i++) \{\par
+\tab\tab\tab if (palindromo.charAt(i)!=palindromo.charAt(palindromo.length()-i-1)) \{\par
+\tab\tab\tab\tab flag = false;\par
+\tab\tab\tab\}\par
+\tab\tab\f3\lang1040\}\f2\lang16\par
+\tab\tab if (flag) \{\par
+\tab\tab\tab System.\i out\i0 .println("la parola \f3\'e8 palindroma"\f2 );\par
+\tab\tab\}\par
+\tab\tab else \{\par
+\tab\tab\tab System.\i out\i0 .println("la parola non \f3\'e8 palindroma"\f2 );\par
+\tab\tab\}\par
+8) Dato un vettore di interi contenente i valori: 2,7,1, scrivere l\rquote algoritmo capace di effettuare il corretto\par
+ordinamento dei numeri. \par
+\b0 public static void main(String[]args) \{\par
+\tab\tab int []v= \{2,7,1\};\par
+\tab\tab\par
+\tab\tab for (int i=0;i<v.length;i++) \{\par
+\tab\tab\tab for(int j=i;j>0;j--) \{\par
+\tab\tab\tab\tab if (v[j]<v[j-1]) \{\par
+\tab\tab\tab\tab\tab int temp=v[j-1];\par
+\tab\tab\tab\tab\tab v[j-1]=v[j];\par
+\tab\tab\tab\tab\tab v [j]=temp;\par
+\tab\tab\tab\tab\}\par
+\tab\tab\tab\}\par
+\tab\tab\}\par
+\tab\tab for (int \highlight2 i\highlight0 =0;\highlight2 i\highlight0 <v.length;\highlight2 i\highlight0 ++) \{\par
+\tab\tab\tab System.\b\i out\b0\i0 .println(v[\highlight2 i\highlight0 ]);\par
+\tab\tab\}\par
+\tab\}\par
+\par
+9) Dato un ArrayList di stringhe contenente i valori: \ldblquote Mirko\rdblquote ,\rdblquote Alessandro\rdblquote ,\rdblquote Ugo\rdblquote ,\rdblquote Anna\rdblquote , scrivere\par
+l\rquote algoritmo che faccia prima un ordinamento (dalla stringa pi\f3\'f9 corta alla pi\'f9 lunga) e che poi elimini\par
+dall\rquote ArrayList le stringhe dal numero dispari di caratteri. \par
+\f2 public static void main(String[] args) \{\par
+\par
+\tab\tab ArrayList<String> \highlight2 nomi\highlight0 =new ArrayList<String>();\par
+\tab\tab\highlight2 nomi\highlight0 .add("Mirko");\par
+\tab\tab\highlight2 nomi\highlight0 .add("Alessandro");\par
+\tab\tab\highlight2 nomi\highlight0 .add("Ugo");\par
+\tab\tab\highlight2 nomi\highlight0 .add("Anna");\par
+\tab\tab\par
+\tab\tab for (int i=0;i<\highlight2 nomi\highlight0 .size();i++) \{\par
+\tab\tab\tab for(int j=\highlight2 nomi\highlight0 .size()-1;j>i;j--) \{\par
+\tab\tab if (\highlight2 nomi\highlight0 .get(i).length()>\highlight2 nomi\highlight0 .get(j).length()) \{\par
+\tab\tab\tab String temp=\highlight2 nomi\highlight0 .get(i);\par
+\tab\tab\tab\highlight2 nomi\highlight0 .set(i, \highlight2 nomi\highlight0 .get(j));\par
+\tab\tab\tab\highlight2 nomi\highlight0 .set(j, temp);\par
+\tab\tab\}\par
+\tab\tab\}\par
+\tab\tab\par
+\tab\tab\}\par
+\tab\tab for(String nome:\highlight2 nomi\highlight0 ) \{\par
+\tab\tab System.\b\i out\b0\i0 .println(nome);\par
+\tab\tab\}\par
+\tab\tab\}\par
+\b 10) Cosa sono una Classe ed un oggetto.\par
+\b0 Una classe \f3\'e8: una struttura di programmazione, un tipo di dato ed il disegno di un oggetto; per tanto, un\par
+oggetto \'e8 l\rquote istanza di una classe. \b\f2\par
+\cf0\ul\f0\fs22 11) Si faccia l\rquote esempio classico sull\rquote overload.\par
+\ulnone\b0 L\rquote esempio classico \'e8 quello del costruttore. In una classe posso avere sia il costruttore di default che uno o\par
+pi\'f9 costruttori parametrizzati. Nel momento in cui dichiaro dei costruttori parametrizzati, quello di default\par
+va dichiarato esplicitamente in quanto verrebbe nascosto dalle versioni con parametri.\par
+\par
+\cf1\b 12) Cosa \'e8 un costruttore? A che serve e cosa lo distingue dagli altri metodi?\par
+\cf0\b0 E\rquote  il metodo che costruisce gli oggetti quando accompagnato dalla keyword new. Costruire un oggetto\par
+significa allocarlo nella memoria heap. Ogni new+costruttore alloca un nuovo oggetto e quindi viene definito\par
+un nuovo riferimento. Rispetto i metodi comuni segue le seguenti regole: non ha il tipo di ritorno ed ha lo\par
+stesso nome della classe di appartenenza. \par
+\par
+\b 13) Si descriva nel dettaglio il pattern MVC.\par
+\b0 L\rquote MVC \'e8 un modello architetturale. Ragionando per componenti e quindi responsabilizzando le classi in ruoli,\par
+possiamo collocare quest\rquote ultime in tre macrocategorie: Model, View e Controller. Le classi model (o entity)\par
+sono classi di archiviazione e nascono per conservare dati sensibili; per tanto, una classe di questo tipo\par
+presenta attributi privati, conseguenti setter e getter, eventuali costruttori parametrizzati ed eventuali\par
+override dei metodi: toString(), equals() ed hashCode(). Le classi View sono le classi responsabili della\par
+gestione degli input ed output, i cui metodi (maschere) sostituiscono i comuni form delle pagine web. Infine,\par
+la classi Controller nascono per implementare la logica applicativa e per tanto sono le responsabili\par
+dell\rquote esecuzione del programma. Invocando una sequenza di metodi, sono le classi che ricordano il linguaggio\par
+procedurale. \par
+\par
+\b 14) Si descriva il pattern singleton e lo si applichi ad una classe Utility avente i metodi che aprono e\par
+chiudono una connessione col db.\par
+\b0 Il pattern singleton \'e8 un modello che obbliga una classe ad avere una sola istanza. Per questo motivo prevede\par
+che il costruttore sia privato e che ci sia un metodo statico che ritorni l\rquote unica istanza della classe. Questo\par
+pattern viene utilizzato per le classi di servizio, ovvero, per le classi che offrono sole funzionalit\'e0. In questi\par
+casi non avrebbe senso istanziare pi\'f9 oggetti che svolgono lo stesso compito. Un esempio \'e8 la classe che apre\par
+e chiude la connessione ad un database. Usiamo un\rquote unica istanza in quanto sarebbe ridondante creare pi\'f9\par
+oggetti che aprono alla stessa connessione. \par
+\par
+\b 15) Differenza tra classe, classe astratta ed interfaccia.\par
+\b0 Una classe astratta non ha differenze da quella comune se non per il fatto che ha ALMENO un metodo\par
+astratto (metodo non implementato) e non pu\'f2 istanziare oggetti (in quanto l\rquote istanza si troverebbe ad\par
+invocare almeno un metodo non funzionante). Una classe che ne estende una astratta \'e8 obbligata ad\par
+implementare i metodi astratti ereditati. Per dichiarare una classe come astratta si usa la keyword abstract\par
+tra il modificatore d\rquote accesso ed il nome; per dichiarare un metodo come astratto la stessa keyword va messa\par
+tra il modificatore d\rquote accesso ed il tipo di dato ritornato. Le interfacce sono strutture di programmazione, tipi\par
+di dato, ma NON classi. Nel periodo pre-Java 8 ammettevano solo metodi astratti (abstract in questo caso\par
+non viene messo in quanto presente di default) ed eventuali costanti (l\rquote operatore final non si mette poich\'e9 \par
+Domande colloquio (Aggiornato al 7 aprile 2020)\par
+P a g . 5 | 14\par
+l\rquote attributo di una interfaccia \'e8 costante di default), mentre con Java 8 le interfacce possono ammettere anche\par
+metodi statici e di default; con Java 9 possono ammettere anche metodi privati, evocati in quelli di default. \par
+\par
+\ul\b 16) Perch\'e9 un\rquote interfaccia migliora l\rquote ereditariet\'e0 tra classi? Dopo aver risposto, si faccia un esempio con le Collection.\ulnone\b0\par
+Perch\'e9 se una classe figlia pu\'f2 estendere solo una classe padre; di contro, la stessa pu\'f2 implementare pi\'f9\par
+interfacce padre. Ci\'f2 consente una maggiore flessibilit\'e0 in una gerarchia, oltre a rendere meno specifica una\par
+classe. Un esempio tipico \'e8 quello della classe LinkedList; come l\rquote ArrayList eredita tutti i metodi\par
+dell\rquote interfaccia List, ma in pi\'f9 implementa l\rquote interfaccia Queue, potendosi cos\'ec avvalere di ulteriori metodi\par
+come addFirst() e addLast().\par
+\par
+\b 17) Descrivere gli effetti derivati dagli operatori: static e final.\par
+\b0 L\rquote operatore static svincola dall\rquote oggetto in quanto se applicato alle variabili, queste vengono memorizzate\par
+nella method area e non nell\rquote heap, mentre se applicato ai metodi, questi possono essere invocati\par
+direttamente dalle classi di appartenenza. L\rquote operatore final invece si traduce in immutabilit\'e0, per cui se\par
+applicato agli attributi si ottengono delle costanti, se applicato ai metodi questi diventano NON sovrascrivibili\par
+con l\rquote override, se applicato alle classi queste diventano non estendibili. \par
+\b 18) Cosa \'e8 una classe Wrapper e per quali motivi nasce?\par
+\b0 Una classe Wrapper \'e8 una classe che si riferisce ai dati primitivi e nasce per incapsulare un dato primitivo in\par
+un oggetto che cos\'ec pu\'f2 essere inserito nelle liste (es.ArrayList) che accettano SOLO gli oggetti. Inoltre, queste\par
+classi aggiungono funzionalit\'e0 ai tipi primitivi; un esempio sono i parse, ovvero, i metodi di conversione. Se\par
+volessimo ad esempio convertire una stringa in un tipo int, useremmo Integer.parseInt(\ldblquote stringa\rdblquote ), ove Integer\par
+\'e8 la classe wrapper riferita al tipo int. Altri esempi di classi wrapper sono: Double, Boolean, ecc. \par
+\b 19) Fare un esempio di polimorfismo degli oggetti sia lato upcasting che lato downcasting.\par
+\b0 Date due classi: Dipendente e Manager, ove la seconda estende la prima, per effetto dell\rquote Upcasting posso\par
+dichiarare l\rquote istanza della classe Manager con il tipo Dipedente (che tra le due \'e8 la classe pi\'f9 generica). Per\ul  \ulnone cui:\par
+Dipendente m = new Manager();\par
+Ci\'f2 non sorprende in quanto un oggetto di Manager \'e8 anche un dipendente. L\rquote upcasting quindi giustifica\par
+perch\'e9 in un metodo, in cui l\rquote argomento \'e8 un tipo Dipendente, \'e8 possibile passare anche l\rquote istanza di Manager.\par
+Con il downcasting ci poniamo il seguente problema. Se un metodo ha nella firma un argomento di tipo\par
+Dipendente, l\rquote intera implementazione va scritta rispetto questo tipo. Per cui, nel caso in cui passiamo\par
+l\rquote istanza di Manager, cosa facciamo? Dobbiamo usare il cast per far capire che all\rquote altezza di una determinata\par
+riga pu\'f2 arrivare un manager al posto del semplice dipendente. Per cui se:\par
+Dipendente d = new Dipendente(); \par
+posso scrivere come segue:\par
+((Manager)d).metodoDiUnManager(); -> il cast mi permette di usare il metodo di un tipo pi\'f9 specifico usando\par
+l\rquote oggetto di una classe pi\'f9 generica. \par
+\par
+\b 20) Cosa \'e8 instanceof e si faccia un esempio del suo utilizzo.\par
+\b0 Instanceof consente di riconoscere il tipo dell\rquote oggetto passato ad un metodo. Esempio:\par
+public void riconosciIstanza(Dipendente d)\{\par
+ if(d instanceof Manager)\par
+ System.out.print(\ldblquote L\rquote oggetto appartiene alla classe Manager\rdblquote );\par
+ else\par
+ System.out.print(\ldblquote L\rquote oggetto appartiene alla classe Dipendente\rdblquote );\par
+\}\par
+\b 21) Si illustri la gerarchia delle Collections.\par
+\b0 Le strutture dinamiche List hanno memoria dell\rquote inserimento fatto e per tanto ammettono dati duplicati; le\par
+strutture Set vedono HashSet non riconoscere l\rquote ordine degli inserimenti ed elimina i duplicati, mentre\par
+LinkedHashSet mantiene l\rquote ordine degli inserimenti ma elimina i duplicati. Queue indica consente la gestione\par
+delle pile e delle code; la pila segue la politica LIFO (Last Input First Output), ovvero, l\rquote ultimo dato ad entrare\par
+\'e8 la testa, ma questo \'e8 anche il primo ad uscire (es. pila di piatti); la coda segue la politica FIFO (First Input\par
+First Output) ove il primo dato inserito \'e8 il primo ad essere letto (es. tangenziale -> il primo che arriva al\par
+casello \'e8 il primo ad uscire da quest\rquote ultimo). LinkedList implementando sia List che Queue si avvale sia dei\par
+metodi di un ArrayList che quelli delle politiche LIFO e FIFO. \par
+\par
+}
+ 
