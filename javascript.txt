@@ -1,0 +1,25 @@
+var nome_inserito="";
+document.getElementById("input_nome").onClick()=function(){}
+
+document.getElementById("sonoUnid").hover()=function(){}
+<div id="sonoUnId"></div>
+
+<input id="input_nome"></input>
+
+se io volessi recupare il valore dal tag input
+document.getElementById("input_nome").value(), // si innescano in automatico quando un evento si verifica 
+
+
+
+document.getElementById("input_nome").innertHtml="campovuoto"
+
+<small id="nome"></small>
+
+<script>
+document.getElementById("nome").innertHtml="campovuoto";
+document.getElementById("nome").style.backgroundColor="red";si usa style per modificare gli attributi
+per modificare un link metti un url
+
+
+</script>
+con la graffa stai 
